@@ -1,0 +1,70 @@
+name: vip
+description: A new Flutter project.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.1.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+  flutter_screenutil:
+  equatable: ^2.0.5
+  chucker_flutter: ^1.6.1
+  cached_network_image: ^3.3.0
+  flutter_svg: ^2.0.9
+  connectivity_plus: ^2.3.4
+  dio:
+  country_code_picker:
+  image_picker: ^1.0.4
+  pin_code_fields: ^8.0.1
+  retrofit:
+  shared_preferences:
+  google_maps_flutter: ^2.2.3
+  url_launcher:
+  bloc: ^7.2.0
+  flutter_bloc: ^7.0.0
+  get_it:
+  dartz:
+  socket_io_client:
+  json_annotation: ^4.8.1
+  json_serializable:
+  fluttertoast:
+  freezed_annotation:
+  flutter_localizations:
+    sdk: flutter
+  intl: any
+  permission_handler:
+  dots_indicator:
+  flutter_secure_storage:
+  flutter_widget_from_html_core: ^0.14.9
+  carousel_slider: ^4.2.1
+  photo_view:
+  moyasar:
+
+dev_dependencies:
+  build_runner: ^2.4.8
+  freezed:
+  json_serializable:
+  retrofit_generator: '>=7.0.0 <8.0.0'
+  flutter_lints: ^2.0.0
+
+flutter:
+  uses-material-design: true
+
+
+
+  assets:
+    - assets/images/
+#    - assets/images/svgs/
+#    - assets/images/gifs/
+#    - assets/json/mockups/home/
+#    - assets/json/mockups/about/
+#    - assets/json/mockups/elevators-by-type/
+    - assets/translations/ar.json
+    - assets/translations/en.json
+#    - shorebird.yaml
+
+
