@@ -26,7 +26,6 @@ class PageViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Stack(
-      alignment: Alignment.center,
       children: [
         Positioned.fill(
             child: Image.asset(
@@ -78,21 +77,24 @@ class PageViewBody extends StatelessWidget {
                     // }
                   }),
 
-  BlocBuilder<OnBoardingControllerCubit, OnBoardingState>(
-              builder: (context, state) {
-                var cubit = OnBoardingControllerCubit.get(context);
-                return   DotsIndicator(
-                  dotsCount: cubit.tabs.length,
-                  position: cubit.currentIndex,
-                  decorator: DotsDecorator(
-                    color: Theme.of(context).hintColor,
-                    activeColor: Theme.of(context).primaryColor,
-                  ),
+
+              BlocBuilder<OnBoardingControllerCubit, OnBoardingState>(
+                builder: (context, state) {
+                  var cubit = OnBoardingControllerCubit.get(context);
+                  return   DotsIndicator(
+                    dotsCount: cubit.tabs.length,
+                    position: cubit.currentIndex,
+                    decorator: DotsDecorator(
+                      color: Theme.of(context).hintColor,
+                      activeColor: Theme.of(context).primaryColor,
+                    ),
 
 
-                );
-              },
-            ),
+                  );
+                },
+              ),
+
+
             ],
           ),
         )
