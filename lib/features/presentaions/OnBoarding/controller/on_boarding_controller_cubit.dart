@@ -68,8 +68,8 @@ class OnBoardingControllerCubit extends Cubit<OnBoardingState> {
     CacheHelper.saveData(key: onBordKey, value: true).whenComplete(
         ()   {
           // Navigator.of(context). pushReplacementNamed(AppPaths.loginWithPass);
-// go to second page using MaterialPageRoute
-          OneContext().pushNamed(AppPaths.loginWithPass);
+           OneContext().pushNamed(AppPaths.homeScreen);
+           // OneContext().pushNamed(AppPaths.loginWithPass);
         });
 }
 
