@@ -5,13 +5,14 @@ import 'app_colors_light.dart';
 class AppColorsDark implements AppColors {
   static AppColorsDark get instance => AppColorsDark();
   @override
-  Color get primaryColorBlack => Colors.black;
+  Color get primaryColorBlack =>     const Color(0xff0F0E0E);
+
 
   @override
   Color get primaryColorYellow => const Color(0xffEBB739);
 
   @override
-  Color get primaryColorBrownDark => const Color(0xff8F734A);
+   Color get primaryColorBrownDark => const Color(0xff8F734A);
 
   @override
   Color get primaryColorBrownDark2 => const Color(0xff8E754C);
@@ -30,6 +31,8 @@ class AppColorsDark implements AppColors {
 
   @override
   Color get primaryColorWhite0 => const Color(0xffF4F8FB);
+
+
 
 
 

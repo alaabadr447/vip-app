@@ -24,7 +24,7 @@ class AppColorsLight implements AppColors {
   Color get primaryColorGrey => const Color(0xffCCCCCC);
 
   @override
-  Color get primaryColorWhite => const Color(0xffFFFFFF);
+  Color get primaryColorWhite => const Color(0xffFCFCFC);
 
   @override
   Color get primaryColorWhite0 => const Color(0xffF4F8FB);

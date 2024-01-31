@@ -3,11 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:vip/common/consts/strings/app_strings.dart';
-
-import '../../../../common/dimensions.dart';
-import '../../../../common/style/app_colors.dart';
 import '../../../../common/style/app_style.dart';
-import '../../../../common/style/test_style.dart';
 import '../../../../widgets/custom_button.dart';
 import '../controller/on_boarding_controller_cubit.dart';
 
@@ -25,13 +21,20 @@ class PageViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
+    return BlocBuilder<OnBoardingControllerCubit, OnBoardingState>(
+        builder: (context, state) {
+      var cubit = OnBoardingControllerCubit.get(context);
+      return Stack(
       children: [
-        Positioned.fill(
+        Positioned(
+            top: 0,
+            bottom: 0,
+            left: 0,
+            right: 0,
             child: Image.asset(
-          image,
-          fit: BoxFit.fill,
-        )),
+              image,
+              fit: BoxFit.contain,
+            )),
         Positioned(
           top: 145.h,
           left: 20.w,
@@ -59,46 +62,14 @@ class PageViewBody extends StatelessWidget {
                         fontWeight: FontWeight.w700),
                   )),
               K.sizedBoxH,
-              CustomButton(
-                  buttonText: AppStrings.getStarted,
-                  isLoading: false,
-                  width: 150,
-                  backgroundColor: Theme.of(context).primaryColor,
-                  radius: 10,
-                  textColor: Theme.of(context).colorScheme.outlineVariant,
-                  onPressed: () {
-                    // if (cubit.isLastPage) {
-                    //   cubit.onGetStart(context);
-                    // } else {
-                    //   cubit.pageController.nextPage(
-                    //     duration: const Duration(milliseconds: 300),
-                    //     curve: Curves.easeIn,
-                    //   );
-                    // }
-                  }),
-
-
-              BlocBuilder<OnBoardingControllerCubit, OnBoardingState>(
-                builder: (context, state) {
-                  var cubit = OnBoardingControllerCubit.get(context);
-                  return   DotsIndicator(
-                    dotsCount: cubit.tabs.length,
-                    position: cubit.currentIndex,
-                    decorator: DotsDecorator(
-                      color: Theme.of(context).hintColor,
-                      activeColor: Theme.of(context).primaryColor,
-                    ),
-
-
-                  );
-                },
-              ),
-
 
             ],
           ),
-        )
+        ),
       ],
+    ) ;}
+
+
     );
   }
 }
