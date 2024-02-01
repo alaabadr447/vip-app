@@ -25,9 +25,9 @@ class AdsBody extends StatelessWidget {
               onPageChanged: (index1, reason) {
                 // controller.currentImageIndex.value = index1;
               }),
-          itemCount: 5,
-          itemBuilder: (BuildContext context, int index, int realIndex) {
-            return Column(
+                itemCount: 5,
+                itemBuilder: (BuildContext context, int index, int realIndex) {
+                  return Column(
               children: [
                 Image.asset(Images.onboard1),
                 AnimatedSmoothIndicator(
